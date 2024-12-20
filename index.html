@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends List</title>
+</head>
+<body>
+    <h1>Friends List</h1>
+    
+    <!-- Form to Add or Edit Friend -->
+    <form action="actions.php" method="POST">
+        <input type="hidden" name="action" value="add">
+        <input type="hidden" name="id" id="friend_id">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="friend_name" required>
+        <button type="submit">Save</button>
+    </form>
+
+    <hr>
+
+    <!-- Friends List -->
+    <h2>Current Friends:</h2>
+    <ul>
+        <?php include 'list_friends.php'; ?>
+    </ul>
+</body>
+</html>
